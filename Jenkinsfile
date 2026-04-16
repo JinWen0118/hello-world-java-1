@@ -9,11 +9,11 @@ pipeline {
         }
         // use gradle wrapper to build and test the project
         stage('Build') {
-            steps { bat 'gradlew clean build'}
+            steps { sh 'gradlew clean build'}
         }
         // use gradle wrapper to run the unit tests
         stage('Test') {
-            steps { bat 'gradlew test'}
+            steps { sh 'gradlew test'}
         }
         // use gradle wrapper to run the jar file
         stage('Deploy') {
